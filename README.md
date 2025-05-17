@@ -1,6 +1,6 @@
 # Meu Plano IA: Seu Assistente Inteligente de Estudos
 
-[![Logo do Meu Plano IA](link_para_sua_logo.png)](link_para_o_repositorio)
+![Logo do Meu Plano IA](assets/logo.png)
 
 > Seu assistente inteligente para criar planos de estudo personalizados que se adaptam ao seu ritmo e objetivos, otimizando seu tempo e te guiando rumo ao sucesso no aprendizado.
 
