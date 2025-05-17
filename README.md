@@ -4,6 +4,11 @@
   <img src="assets/meu_plano_ia_logo.png" width="300">
 </p>
 
+
+<p align="center" style="background-color: white; padding: 10px; border-radius: 5px;">
+  <img src="assets/meu_plano_ia_logo.png" width="300">
+</p>
+
 > Seu assistente inteligente para criar planos de estudo personalizados que se adaptam ao seu ritmo e objetivos, otimizando seu tempo e te guiando rumo ao sucesso no aprendizado.
 
 ## 🏆 Premiação Imersão IA 2025 - Alura & Google
