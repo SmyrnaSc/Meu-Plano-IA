@@ -59,10 +59,9 @@ Este projeto busca atender aos critérios de avaliação da Premiação Imersão
 * **Eficácia:** O projeto gera um plano de estudos detalhado com módulos, tópicos semanais e estimativa de tempo, proporcionando um roteiro claro para o aprendizado. A interface Gradio torna a interação simples e direta, especialmente no ambiente Colab.
 * **Apresentação:** A interface web amigável e este README bem estruturado visam apresentar o projeto de forma clara e profissional. A facilidade de execução no Colab também contribui para a acessibilidade do projeto.
 
-## 📚 Documentação Adicional
+## 📚 Documentação Detalhada
 
-Para uma documentação mais detalhada sobre a arquitetura interna e o fluxo de dados, confira a [Wiki do Projeto](link_para_a_wiki).
-
+Para uma compreensão completa da arquitetura interna e do fluxo de dados do "Meu Plano IA", consulte a [Wiki do Projeto](https://github.com/SmyrnaSc/Meu-Plano-IA/wiki/Meu-Plano-IA:-Documenta%C3%A7%C3%A3o-do-C%C3%B3digo). Este documento detalha como os diferentes componentes interagem para gerar um plano de estudos personalizado para o usuário.
 
 Feito com ❤️ por Smyrna
 ---
