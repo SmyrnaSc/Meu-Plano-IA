@@ -1,16 +1,18 @@
-# Meu Plano IA: Seu Assistente Inteligente de Estudos
+# Meu Plano IA: Seu Assistente Inteligente de Estudos 
 
-![Logo do Meu Plano IA](assets/meu_plano_ia_logo.png)
+<p align="center">
+  <img src="assets/meu_plano_ia_logo.png" width="300">
+</p>
 
 > Seu assistente inteligente para criar planos de estudo personalizados que se adaptam ao seu ritmo e objetivos, otimizando seu tempo e te guiando rumo ao sucesso no aprendizado.
 
 ## 🏆 Premiação Imersão IA 2025 - Alura & Google
 
-Este projeto foi desenvolvido para participar da Premiação Imersão IA 2025, utilizando os conhecimentos adquiridos nas aulas sobre IA generativa e construção de agentes.
+Este projeto foi desenvolvido para participar da Premiação Imersão IA 2025, utilizando os conhecimentos adquiridos nas aulas sobre IA generativa e construção de agentes. O desenvolvimento e os testes foram realizados principalmente no ambiente Google Colaboratory (Colab).
 
 ## 💡 Sobre o Projeto
 
-O "Meu Plano IA" é uma ferramenta que utiliza a inteligência artificial do Google Gemini para gerar planos de estudo personalizados. Ao fornecer informações como seu objetivo de aprendizado, tempo disponível, nível de conhecimento e recursos preferenciais, o sistema cria um roteiro completo e adaptado às suas necessidades.
+O "Meu Plano IA" é uma ferramenta que utiliza a inteligência artificial do Google Gemini para gerar planos de estudo personalizados. Ao fornecer informações como seu objetivo de aprendizado, tempo disponível, nível de conhecimento e recursos preferenciais, o sistema cria um roteiro completo e adaptado às suas necessidades. O projeto foi estruturado e rodado no Google Colab, aproveitando a facilidade de uso e as bibliotecas disponíveis nesse ambiente.
 
 ## ✨ Funcionalidades Principais
 
@@ -20,37 +22,33 @@ O "Meu Plano IA" é uma ferramenta que utiliza a inteligência artificial do Goo
 * **Sugestão de Recursos:** (Atualmente placeholders) Links de recursos relevantes são incluídos para cada tópico (melhoria futura).
 * **Interface Amigável:** Uma interface web intuitiva construída com Gradio facilita a interação.
 
-## 🚀 Como Utilizar
+## 🚀 Como Utilizar (Execução no Google Colab)
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/SmyrnaSc/Meu-Plano-IA.git](https://github.com/SmyrnaSc/Meu-Plano-IA.git)
-    cd Meu-Plano-IA
-    ```
+1.  **Acesse o notebook do Colab:**
+    Abra o seu notebook do Google Colab onde você carregou o arquivo `meu-plano-ia.py` e a pasta `assets`.
 
-2.  **Instale as bibliotecas necessárias:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    Certifique-se de ter o arquivo `requirements.txt` na raiz do seu repositório com as dependências: `google-generativeai` e `gradio` (e quaisquer outras que você utilize).
+2.  **Execute o notebook:**
+    Execute todas as células do notebook Colab.
 
-3.  **Execute a aplicação:**
-    ```bash
-    python src/app.py
-    ```
-    Assumindo que o seu arquivo principal que inicia o Gradio está dentro da pasta `src` e se chama `app.py`. Se o nome do seu arquivo principal for diferente, substitua `src/app.py` pelo caminho e nome corretos.
+3.  **Obtenha sua chave da API do Google Gemini:**
+    * Para usar o "Meu Plano IA", você precisa de uma chave da API do Google Gemini. Essa chave permite que o programa se conecte e utilize os serviços de IA do Google.
+    * Você pode obter uma chave da API seguindo as instruções na [documentação do Google Gemini](https://ai.google.dev/tutorials).
+      
+4.  **Insira a chave da API:**
+    Quando solicitado na saída da célula, insira a sua chave da API do Google Gemini. Essa chave é essencial para que o programa funcione, pois é ela que autoriza o uso dos modelos de linguagem do Google.
 
-4.  **Acesse a interface:** Após executar o comando acima, o Gradio geralmente exibe um link no terminal (geralmente começando com `http://` e seguido por um endereço IP e uma porta, como `http://localhost:7860` ou um endereço público se estiver rodando no Colab e compartilhado). Abra este link no seu navegador.
+5.  **Acesse a interface Gradio:**
+    Após a execução, um link público temporário será gerado (geralmente com o formato `https://xxxxxxxxx.gradio.live`). Clique neste link para abrir a interface do "Meu Plano IA" no seu navegador.
 
-5.  **Preencha os campos:** Na interface web que será aberta, informe seu objetivo de aprendizado, horas semanais disponíveis, duração total desejada, seu nível de conhecimento e recursos preferenciais.
+6.  **Preencha os campos:** Na interface web, informe seu objetivo de aprendizado, horas semanais disponíveis, duração total desejada, seu nível de conhecimento e recursos preferenciais.
 
-6.  **Clique em "Gerar Plano":** Após preencher os campos, clique no botão para gerar o seu plano de estudos personalizado. O plano será exibido na interface.
+7.  **Clique em "Gerar Plano":** O sistema irá processar suas informações e exibir o plano de estudos personalizado.
 
 ## ⚙️ Tecnologias Utilizadas
 
 * **Google Gemini:** Para a geração inteligente do plano de estudos.
-* **Gradio:** Para criar a interface web interativa.
-* **Python:** Linguagem de programação principal.
+* **Gradio:** Para criar a interface web interativa, com execução facilitada no Google Colab.
+* **Python:** Linguagem de programação principal, ambiente padrão no Google Colab.
 
 ## 🎯 Critérios de Avaliação da Premiação
 
@@ -58,8 +56,8 @@ Este projeto busca atender aos critérios de avaliação da Premiação Imersão
 
 * **Utilidade do Projeto:** Oferece uma solução prática e personalizada para o planejamento de estudos, auxiliando estudantes e aprendizes a se organizarem de forma eficaz.
 * **Criatividade:** A abordagem de utilizar o Gemini para criar um plano de estudos dinâmico e adaptável, com a divisão em agentes (implícita na lógica), demonstra uma aplicação criativa da IA generativa.
-* **Eficácia:** O projeto gera um plano de estudos detalhado com módulos, tópicos semanais e estimativa de tempo, proporcionando um roteiro claro para o aprendizado. A interface Gradio torna a interação simples e direta.
-* **Apresentação:** A interface web amigável e este README bem estruturado visam apresentar o projeto de forma clara e profissional.
+* **Eficácia:** O projeto gera um plano de estudos detalhado com módulos, tópicos semanais e estimativa de tempo, proporcionando um roteiro claro para o aprendizado. A interface Gradio torna a interação simples e direta, especialmente no ambiente Colab.
+* **Apresentação:** A interface web amigável e este README bem estruturado visam apresentar o projeto de forma clara e profissional. A facilidade de execução no Colab também contribui para a acessibilidade do projeto.
 
 ## 📚 Documentação Adicional
 
