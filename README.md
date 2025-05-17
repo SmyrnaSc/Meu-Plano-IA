@@ -78,6 +78,9 @@ Este projeto está licenciado sob a [Nome da Licença] - veja o arquivo [LICENSE
 
 Se tiver alguma dúvida, entre em contato através de [seu e-mail ou link para seu perfil].
 
+## 📚 Documentação Adicional
+
+Para uma documentação mais detalhada sobre a arquitetura interna e o fluxo de dados, confira a [Wiki do Projeto](link_para_a_wiki).
 ---
 
 Feito com ❤️ por [Seu Nome/Nome do Projeto].
