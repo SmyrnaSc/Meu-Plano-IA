@@ -62,6 +62,7 @@ Este projeto busca atender aos critérios de avaliação da Premiação Imersão
 ## 📚 Documentação Adicional
 
 Para uma documentação mais detalhada sobre a arquitetura interna e o fluxo de dados, confira a [Wiki do Projeto](link_para_a_wiki).
----
+
 
 Feito com ❤️ por Smyrna
+---
