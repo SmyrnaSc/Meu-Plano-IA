@@ -524,4 +524,4 @@ with gr.Blocks(theme=gr.themes.Base()) as demo: # Adicione o tema aqui
         outputs=output_box
     )
 
-demo.launch(share=True, debug=False)
+demo.launch(share=True, debug=True)
