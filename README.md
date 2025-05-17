@@ -1,18 +1,8 @@
-# Meu Plano IA: Seu Assistente Inteligente de Estudos 
+# 🧠 Meu Plano IA: Seu Assistente Inteligente de Estudos 
 
-<p align="center">
-  <img src="assets/meu_plano_ia_logo.png" width="300">
-</p>
-
-
-<p align="center">
-  <img src="assets/meu_plano_ia_logo.png" width="300" style="background-color: white; padding: 10px; border-radius: 5px;">
-</p>
-
-<div style="background-color: white; padding: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
-    <img src="assets/meu_plano_ia_logo.png" height="100" style="margin-right: 10px;">
-    <img src="fundo_branco_logo.png" width="100%" height="120" style="position: absolute; left: 0; top: 0; z-index: -1;">
-</div>
+   <p align="center">
+       <img src="assets/meu_plano_ia_logo_branca.png">
+   </p>
 
 > Seu assistente inteligente para criar planos de estudo personalizados que se adaptam ao seu ritmo e objetivos, otimizando seu tempo e te guiando rumo ao sucesso no aprendizado.
 
@@ -69,10 +59,9 @@ Este projeto busca atender aos critérios de avaliação da Premiação Imersão
 * **Eficácia:** O projeto gera um plano de estudos detalhado com módulos, tópicos semanais e estimativa de tempo, proporcionando um roteiro claro para o aprendizado. A interface Gradio torna a interação simples e direta, especialmente no ambiente Colab.
 * **Apresentação:** A interface web amigável e este README bem estruturado visam apresentar o projeto de forma clara e profissional. A facilidade de execução no Colab também contribui para a acessibilidade do projeto.
 
-## 📚 Documentação Adicional
+## 📚 Documentação Detalhada
 
-Para uma documentação mais detalhada sobre a arquitetura interna e o fluxo de dados, confira a [Wiki do Projeto](link_para_a_wiki).
-
+Para uma compreensão completa da arquitetura interna e do fluxo de dados do "Meu Plano IA", consulte a [Wiki do Projeto](https://github.com/SmyrnaSc/Meu-Plano-IA/wiki/Meu-Plano-IA:-Documenta%C3%A7%C3%A3o-do-C%C3%B3digo). Este documento detalha como os diferentes componentes interagem para gerar um plano de estudos personalizado para o usuário.
 
 Feito com ❤️ por Smyrna
 ---
