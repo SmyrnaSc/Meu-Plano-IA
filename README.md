@@ -5,9 +5,14 @@
 </p>
 
 
-<p align="center" style="background-color: white; padding: 10px; border-radius: 5px;">
-  <img src="assets/meu_plano_ia_logo.png" width="300">
+<p align="center">
+  <img src="assets/meu_plano_ia_logo.png" width="300" style="background-color: white; padding: 10px; border-radius: 5px;">
 </p>
+
+<div style="background-color: white; padding: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+    <img src="assets/meu_plano_ia_logo.png" height="100" style="margin-right: 10px;">
+    <img src="fundo_branco_logo.png" width="100%" height="120" style="position: absolute; left: 0; top: 0; z-index: -1;">
+</div>
 
 > Seu assistente inteligente para criar planos de estudo personalizados que se adaptam ao seu ritmo e objetivos, otimizando seu tempo e te guiando rumo ao sucesso no aprendizado.
 
