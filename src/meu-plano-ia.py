@@ -194,7 +194,6 @@ Retorne a resposta em formato JSON, com a seguinte estrutura:
     except Exception as e:
         print(f"Erro no Agente Detalhador para '{nome_modulo}': {e}")
         return None
-
 def agente_formatador_plano_final(dados_usuario, lista_modulos, dict_detalhes_modulos, llm_model):
     if not llm_model:
         return None
@@ -216,7 +215,7 @@ MÓDULOS:
 DETALHES DOS MÓDULOS (em JSON):
 {detalhes_formatado}
 
-Formate um plano de estudos detalhado e amigável para o usuário, utilizando as informações acima. Inclua uma introdução motivadora, a lista de módulos com sua duração estimada e, para cada módulo, os tópicos a serem estudados por semana com uma estimativa de tempo. Conclua com uma mensagem de incentivo.
+Formate um plano de estudos detalhado e amigável para o usuário, utilizando as informações acima. Inclua uma introdução motivadora, a lista de módulos com sua duração estimada e, para cada módulo, os tópicos a serem estudados por semana com uma estimativa de tempo. O título do plano deve refletir o objetivo de aprendizado do usuário. Conclua com uma mensagem de incentivo relacionada ao objetivo de aprendizado.
 """
     try:
         response = llm_model.generate_content(prompt)
@@ -225,7 +224,7 @@ Formate um plano de estudos detalhado e amigável para o usuário, utilizando as
         print(f"Erro no Agente Formatador: {e}")
         return None
 
-# Função principal MODIFICADA com barra de progresso
+# Função principal MODIFICADA para usar o objetivo no título e conclusão
 def gerar_plano_estudos(objetivo_aprendizado, horas_semanais, duracao_estudo, nivel_conhecimento, recursos_preferenciais, outras_informacoes):
     status = "Preparando..."
     yield status, ""
@@ -276,8 +275,8 @@ def gerar_plano_estudos(objetivo_aprendizado, horas_semanais, duracao_estudo, ni
 
     status = "Formatando plano final..."
     yield status, ""
-    plano = agente_formatador_plano_final(dados_usuario, lista_modulos, detalhes, model) # Passando 'detalhes' para a função
-    if not plano:
+    plano_texto_final = agente_formatador_plano_final(dados_usuario, lista_modulos, detalhes, model)
+    if not plano_texto_final:
         status = "❌ Erro ao formatar o plano final."
         yield status, ""
         return status, ""
@@ -405,13 +404,11 @@ a:hover {{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }}
 </style>
-"""
-    # Adiciona emojis e formatação de tabela
-    plano_formatado = f"""<div class="container">
-<h2>Plano de Estudos de Python</h2>
+<div class="container">
+<h2>Plano de Estudos de {objetivo_aprendizado}</h2>
 <p>
-    Bem-vindo ao seu Plano de Estudos de Python! Prepare-se para embarcar em uma jornada fascinante no mundo da programação com Python!
-    Este plano de estudos, elaborado especialmente para você, irá guiá-lo através dos conceitos fundamentais da linguagem.
+    Bem-vindo ao seu Plano de Estudos de {objetivo_aprendizado}! Prepare-se para embarcar em uma jornada de aprendizado focada em seus objetivos!
+    Este plano de estudos, elaborado especialmente para você, irá guiá-lo através dos conceitos fundamentais para alcançar seu objetivo.
 </p>
 <h3>Informações do Aluno:</h3>
 <ul>
@@ -436,31 +433,27 @@ a:hover {{
             for semana in detalhes[modulo['nome_modulo']]:
                 for topico in semana['topicos']:
                     plano_formatado += f"""
-            <tr>
-                <td>{semana['semana']}</td>
-                <td>{topico['nome_topico']}</td>
-                <td>{topico['duracao_estimada']} horas</td>
-                <td><a href="{topico['link_recurso']}">Link</a></td>
-            </tr>
-            """
+                <tr>
+                    <td>{semana['semana']}</td>
+                    <td>{topico['nome_topico']}</td>
+                    <td>{topico['duracao_estimada']} horas</td>
+                    <td><a href="{topico['link_recurso']}">Link</a></td>
+                </tr>
+                    """
             plano_formatado += "</tbody></table>"
         plano_formatado += "</li>\n"
-    plano_formatado += """
+    plano_formatado += f"""
 </ol>
 <h3>Conclusão:</h3>
 <p>
-    Parabéns por concluir este plano de estudos! Você deu um grande passo na sua jornada de aprendizado em Python. Lembre-se que a prática é fundamental.
-    Continue praticando, explorando novos projetos e não hesite em buscar ajuda quando precisar. O mundo da programação te espera! Boa sorte e continue aprendendo!
+    Parabéns por iniciar seu plano de estudos de {objetivo_aprendizado}! Você deu um grande passo para alcançar seus objetivos de aprendizado. Lembre-se que a dedicação e a prática são essenciais.
+    Continue explorando, aplicando o que aprender e não hesite em buscar recursos adicionais. Desejo muito sucesso em sua jornada de aprendizado de {objetivo_aprendizado}!
 </p>
 </div>
 """
 
-
     yield status, f"<div style='color: black; background-color: #e0e0e0; max-height: 70vh; overflow-y: auto; padding: 10px; border-radius: 5px; white-space: pre-wrap;'>{plano_formatado}</div>"
     return status, f"<div style='color: black; background-color: #e0e0e0; max-height: 70vh; overflow-y: auto; padding: 10px; border-radius: 5px; white-space: pre-wrap;'>{plano_formatado}</div>"
-
-def clear_output():
-    return gr.update(value="")
 
 with gr.Blocks(theme=gr.themes.Base()) as demo: # Adicione o tema aqui
     demo.head = """
